@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.laptopappstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".server.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Laptop Store"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Registrasi"></activity>
+        <activity android:name=".pesenacer" />
+        <activity android:name=".pesanasus" />
+        <activity android:name=".acer" />
+        <activity android:name=".asus" />
+        <activity android:name=".merklaptop" />
+        <activity android:name=".RegisActivity" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

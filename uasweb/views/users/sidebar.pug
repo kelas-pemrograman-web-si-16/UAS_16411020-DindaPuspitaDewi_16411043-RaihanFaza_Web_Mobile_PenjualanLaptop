@@ -1,0 +1,82 @@
+aside.main-sidebar
+    // sidebar: style can be found in sidebar.less
+    section.sidebar
+        // Sidebar user panel
+        .user-panel
+            .pull-left.image
+                img.img-circle(src='/adminlte/dist/img/user2-160x160.jpg' alt='User Image')
+            .pull-left.info
+                p #{session_store.username}
+                a(href='#')
+                    i.fa.fa-circle.text-success
+                    |  Online
+        ul.sidebar-menu(data-widget='tree')
+            li.header MAIN NAVIGATION
+                li.treeview
+                    a(href='/')
+                        i.fa.fa-dashboard
+                        span Dashboard
+                if(session_store.admin == true)
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Laptop
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/inputlaptop')
+                                    i.fa.fa-circle-o
+                                    |  Input Data Laptop
+                            li
+                                a(href='/datalaptop')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Laptop
+                if(session_store.admin == true)
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Pemesanan
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/inputpemesanan')
+                                    i.fa.fa-circle-o
+                                    |  Input Data Pemesanan
+                            li
+                                a(href='/datapemesanan')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Pemesanan
+
+                if(session_store.admin == true)
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Pengguna
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/')
+                                    i.fa.fa-circle-o
+                                    |  Input Data Pengguna
+                            li
+                                a(href='/')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Pengguna
+
+                else
+                    li.treeview
+                        a(href='#')
+                            i.fa.fa-laptop
+                            span Data Laptop
+                            span.pull-right-container
+                                i.fa.fa-angle-left.pull-right
+                        ul.treeview-menu
+                            li
+                                a(href='/datalaptopmember')
+                                    i.fa.fa-circle-o
+                                    |  Lihat Data Laptop
+
+    // /.sidebar

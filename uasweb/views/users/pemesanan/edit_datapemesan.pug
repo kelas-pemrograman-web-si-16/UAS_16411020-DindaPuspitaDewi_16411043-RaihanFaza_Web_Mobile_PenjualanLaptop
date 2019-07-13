@@ -1,0 +1,54 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Pemesanan
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Pemesan
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="POST", action='/'+laptops._id + '/editpemesanan')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodepemesan') Kode Pemesan
+                                        .col-sm-10
+                                            input#kodepemesan.form-control(type='text' required name="kodepemesan" placeholder='Kode Pemesan' value= (kodepemesan == undefined) ? pemesanans.kodepemesan: kodepemesan)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nama') Nama
+                                        .col-sm-10
+                                            input#nama.form-control(type='text' required name="nama" placeholder='Nama' value= (nama == undefined) ? pemesanans.nama: nama)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='notelp') No Telp
+                                        .col-sm-10
+                                            input#notelp.form-control(type='text' name="notelp" placeholder='No Telp' value= (notelp == undefined) ? pemesanans.notelp: notelp)
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodelaptop') Kode Laptop
+                                        .col-sm-10
+                                            input#kodelaptop.form-control(type='text' name="kodelaptop" placeholder='Kode laptop' value= (kodelaptop == undefined) ? pemesanans.kodelaptop: kodelaptop)
+
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+

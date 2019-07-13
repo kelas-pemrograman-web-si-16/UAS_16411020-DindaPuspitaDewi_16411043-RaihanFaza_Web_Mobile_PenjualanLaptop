@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Train4G</string>
+    <string name="pp">Train4G</string>
+    <string-array name="nama_stasiun">
+        <item>Tanjung Karang</item>
+        <item>Labuhan Ratu</item>
+        <item>Natar</item>
+        <item>Tegineneng</item>
+        <item>Kotabumi</item>
+        <item>Baturaja</item>
+    </string-array>
+    <string-array name="tipeasus">
+        <item>X45C</item>
+        <item>X25C</item>
+    </string-array>
+    <string-array name="tipeacer">
+        <item>Aspire 35C</item>
+        <item>Aspire 25C</item>
+    </string-array>
+    <string-array name="penumpang">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>

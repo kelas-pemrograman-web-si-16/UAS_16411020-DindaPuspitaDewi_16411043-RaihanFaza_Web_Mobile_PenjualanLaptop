@@ -1,0 +1,54 @@
+include  ../../users/dashboard
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Pemesanan
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input Data Pemesan
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputpemesanans", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodepemesan') Kode Pemesan
+                                        .col-sm-10
+                                            input#kodepemesan.form-control(type='text' required name="kodepemesan" placeholder='Kode Pemesan')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='nama') Nama
+                                        .col-sm-10
+                                            input#nama.form-control(type='text' required name="nama" placeholder='Nama')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='notelp') No Telp
+                                        .col-sm-10
+                                            input#notelp.form-control(type='text' required name="notelp" placeholder='No Telp')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='kodelaptop') Kode Laptop
+                                        .col-sm-10
+                                            input#kodelaptop.form-control(type='text' required name="kodelaptop" placeholder='Kode Laptop')
+
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
+
